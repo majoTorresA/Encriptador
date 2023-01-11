@@ -5,10 +5,14 @@
 body {
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
+  background-color: #e5e5e5;
   color: #191919;
+  min-height: 100vh;
+  margin: 0;
+
 }
 .container {
-  background-color: #e5e5e5;
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -50,8 +54,8 @@ Estilos del lado izquierdo de la pantalla
   border: none;
   background-color: #e5e5e5;
   outline: none;
-  width: 25rem;
-  margin-top: 4rem;
+  width: 90%;
+  margin: 4rem 2rem 0 2rem;  
   height: 25rem;
   resize: none;
   overflow: visible;
@@ -110,4 +114,60 @@ Estilos del lado derecho de la pantalla
 picture .img-searching {
   width: 18rem;
   height: 20rem;
+}
+
+/*///////
+Media Querys: Diseño Responsivo
+/////////*/
+
+@media (max-width:539px){
+    .container {
+      display: grid;
+        grid-template-columns: 1fr ;
+    }
+    .scrn-left{
+     width: 22rem;
+    }
+    #text-area {
+   
+      height: 12rem;
+      font-size: 16px;
+    }
+
+    .scrn-right {
+      justify-content: center;
+      width: 12rem;
+    height: 10rem;
+      margin: 10rem 0 0 0;
+      border-radius: 0;
+    }
+    picture .img-searching {
+     display: none;
+    }
+    .buttons {
+      flex-direction: column;
+    }
+    button {
+      width: 10rem;
+    }
+    h2 {
+      font-size: 22px;
+    }
+}
+@media (min-width: 540px)and(max-width: 767px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and(min-width:768)and(max-width: 1023px){
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and(min-width:1023)and(max-width: 1200px){
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
