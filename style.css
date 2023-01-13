@@ -110,9 +110,13 @@ Estilos del lado derecho de la pantalla
   border-radius: 32px;
 }
 
-picture .scrn-right__img {
+.scrn-right__img {
   width: 18rem;
   height: 20rem;
+}
+.mostrar-texto {
+  margin: 2rem 1rem 1rem
+
 }
 
 /*///////
@@ -135,12 +139,12 @@ Media Querys: Diseño Responsivo
   .scrn-right {
     justify-content: center;
     width: 75%;
-    height: 8rem;
+    height: auto;
     margin: 0 .5rem 1rem .5rem;
     padding: 28px;
   
   }
-  picture .scrn-right__img {
+ .scrn-right__img{
     display: none;
   }
   .buttons {
@@ -158,6 +162,7 @@ Media Querys: Diseño Responsivo
     justify-content: center;
   }
 }
+
 @media (min-width: 540px) and(max-width: 767px) {
   .container {
     grid-template-columns: 1fr;

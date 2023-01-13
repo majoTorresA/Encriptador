@@ -24,6 +24,10 @@ encriptar.addEventListener("click", () =>{
         imagen.style.display = "none"
         //Recorre a estos elementos y los remueve
         noTexto.forEach(el => el.style.display = "none");
-        
+
+        const mostrarTexto = document.querySelector(".mostrar-texto");
+    mostrarTexto.innerText = texto.value;
+    
     }
+
 })
