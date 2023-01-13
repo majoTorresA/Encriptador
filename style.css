@@ -110,7 +110,7 @@ Estilos del lado derecho de la pantalla
   border-radius: 32px;
 }
 
-picture .img-searching {
+picture .scrn-right__img {
   width: 18rem;
   height: 20rem;
 }
@@ -140,7 +140,7 @@ Media Querys: Diseño Responsivo
     padding: 28px;
   
   }
-  picture .img-searching {
+  picture .scrn-right__img {
     display: none;
   }
   .buttons {
