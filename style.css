@@ -115,7 +115,8 @@ Estilos del lado derecho de la pantalla
   height: 20rem;
 }
 .mostrar-texto {
-  margin: 2rem 1rem 1rem
+  
+  margin: 2rem 1rem 0 1rem;
 
 }
 

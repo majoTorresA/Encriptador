@@ -4,7 +4,7 @@ const texto = document.querySelector("#text-area")
 const imagen = document.querySelector(".scrn-right__img")
 //selecciona tanto la etiqueta p como el h2 con clase "info"
 const noTexto = document.querySelectorAll("p[class='info'], h2[class='info']");
-
+const mostrarTexto = document.querySelector(".mostrar-texto");
 
 //Al escribir la letra se transforma en solo min y sin simbolos
 texto.addEventListener("keyup", ()=>{
@@ -16,6 +16,8 @@ texto.addEventListener("input", () => {
     if (texto.value === "") {
       imagen.style.display = "block";
       noTexto.forEach(el => el.style.display = "block");
+      mostrarTexto.style.display = "none"; //agrega esta línea
+      mostrarTexto.innerText = "";
     }
   });
   //Al dar click se esconde la imagen y texto derecho que indica que no hay texto introducido
@@ -24,10 +26,8 @@ encriptar.addEventListener("click", () =>{
         imagen.style.display = "none"
         //Recorre a estos elementos y los remueve
         noTexto.forEach(el => el.style.display = "none");
-
-        const mostrarTexto = document.querySelector(".mostrar-texto");
-    mostrarTexto.innerText = texto.value;
-    
+        mostrarTexto.style.display = "block"; 
+        mostrarTexto.innerText = texto.value;
     }
 
 })
