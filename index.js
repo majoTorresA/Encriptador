@@ -16,7 +16,7 @@ texto.addEventListener("input", () => {
     if (texto.value === "") {
       imagen.style.display = "block";
       noTexto.forEach(el => el.style.display = "block");
-      mostrarTexto.style.display = "none"; //agrega esta línea
+      mostrarTexto.style.display = "none"; 
       mostrarTexto.innerText = "";
     }
   });
@@ -26,8 +26,12 @@ encriptar.addEventListener("click", () =>{
         imagen.style.display = "none"
         //Recorre a estos elementos y los remueve
         noTexto.forEach(el => el.style.display = "none");
+        //usando expresiones regulares, se reemplaza cada vocal con un valor diferente
+        texto.value = texto.value.replace(/[a]/g, "ai").replace(/[e]/g, "enter").replace(/[i]/g, "imes").replace(/[o]/g, "ober").replace(/[u]/g, "ufat")
+        //muestra el texto solo si hay texto adentro
         mostrarTexto.style.display = "block"; 
         mostrarTexto.innerText = texto.value;
+        
     }
 
 })
