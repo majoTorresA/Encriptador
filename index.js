@@ -5,27 +5,19 @@ const imagen = document.querySelector(".scrn-right__img");
 //selecciona tanto la etiqueta p como el h2 con clase "info"
 const noTexto = document.querySelectorAll("p[class='info'], h2[class='info']");
 const mostrarTexto = document.querySelector(".mostrar-texto");
-const copy = document.querySelector(".boton-copiar")
+const copy = document.querySelector(".boton-copiar");
 
 //Se evita que el boton de copiar se despliegue al cargar la página cuando no hay texto
-document.addEventListener('DOMContentLoaded', () => {
-  if(texto.value === ""){
-      copy.style.display = "none";
+document.addEventListener("DOMContentLoaded", () => {
+  if (texto.value === "") {
+    copy.style.display = "none";
   }
 });
 //Al escribir la letra se transforma en solo minuscula y sin simbolos
 texto.addEventListener("keyup", () => {
   //Expresion regular en replace para que no haya simbolos
   texto.value = texto.value.toLowerCase().replace(/[^a-z\s]/g, "");
-  if(texto.value === ""){
-    imagen.style.display = "block";
-    noTexto.forEach((el) => (el.style.display = "block"));
-    mostrarTexto.style.display = "none";
-    mostrarTexto.innerText = "";
-    copy.style.display = "none"
-    
-  }
-  
+ 
 });
 
 let isencriptado = false;
@@ -37,8 +29,8 @@ texto.addEventListener("input", () => {
     noTexto.forEach((el) => (el.style.display = "block"));
     mostrarTexto.style.display = "none";
     mostrarTexto.innerText = "";
-    copy.style.display = "none"
-  }else {
+    copy.style.display = "none";
+  } else {
     imagen.style.display = "none";
     noTexto.forEach((el) => (el.style.display = "none"));
     mostrarTexto.style.display = "block";
@@ -77,7 +69,7 @@ encriptar.addEventListener("click", () => {
     //muestra el texto solo si hay texto adentro
     mostrarTexto.style.display = "block";
     mostrarTexto.innerText = texto.value;
-    copy.style.display = "flex"
+    copy.style.display = "flex";
   }
 });
 
@@ -98,6 +90,13 @@ desencriptar.addEventListener("click", () => {
     //muestra el texto solo si hay texto adentro
     mostrarTexto.style.display = "block";
     mostrarTexto.innerText = texto.value;
-    copy.style.display = "flex"
+    copy.style.display = "flex";
+    isencriptado = false;
   }
 });
+
+copy.addEventListener("click", ()=>{
+  navigator.clipboard.writeText(texto.value).then(
+    () => alert("Texto copiado al portapapeles!"),
+    (error) => alert("Hubo un error al intentar copiar el texto",error)
+)})
