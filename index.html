@@ -6,44 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador</title>
-    <link rel="stylesheet" href="./normalize.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <div class="container">
+    <header>
 
         <section class="logo">
             <picture>
-                <img src="./lock-solid-24.png" alt="img-candado" class="img-logo">
+                <img src="./images/candado.png" alt="img-candado" class="img-logo">
             </picture>
         </section>
-        <section class="scrn-left">
-            <textarea id="text-area" placeholder="Ingresa el texto aqui"></textarea>
+    </header>
+    <main>
 
-            <div class="info">
-                <img src="./info-circle-solid-24.png" alt="logo-info" class="logo-info">
-                <h6>Ingresa solo letras minúsculas y sin acentos</h6>
-            </div>
-
-            <div class="buttons">
-                <button id="encriptar">Encriptar</button>
-                <button id="desencriptar">Desencriptar</button>
-            </div>
-
-        </section>
-
-        <section class="scrn-right">
-            <picture id="picture">
-                <img src="./Search Engine_Two Color.png" alt="Persona-Buscando" class="scrn-right__img">
-            </picture>
-            <div class="mostrar-texto"></div>
-            <h2 class="info">No hay mensajes de entrada</h2>
-            <p class="info">Ingrese el texto que desee encriptar o desencriptar</p>
-            <button class="boton-copiar">Copiar</button>
-        </section>
-    </div>
+        <div class="container">
+    
+            <section class="scrn-left">
+                <textarea id="text-area" placeholder="Ingresa el texto aqui"></textarea>
+    
+                <div class="info">
+                    <img src="./images/info-circle.png" alt="logo-info" class="logo-info">
+                    <h6>Ingresa solo letras minúsculas y sin acentos</h6>
+                </div>
+    
+                <div class="buttons">
+                    <button id="encriptar">Encriptar</button>
+                    <button id="desencriptar">Desencriptar</button>
+                </div>
+    
+            </section>
+    
+            <section class="scrn-right">
+                <picture id="picture">
+                    <img src="./images/Search.png" alt="Persona-Buscando" class="scrn-right__img">
+                </picture>
+                <div class="mostrar-texto"></div>
+                <h2 class="texto-right">No hay mensajes de entrada</h2>
+                <p class="texto-right">Ingrese el texto que desee encriptar o desencriptar</p>
+                <button class="boton-copiar">Copiar</button>
+            </section>
+        </div>
+    </main>
+    
 </body>
-<script src="./index.js"></script>
+<script src="./js/index.js"></script>
 
 </html>

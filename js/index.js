@@ -3,14 +3,15 @@ const desencriptar = document.querySelector("#desencriptar");
 const texto = document.querySelector("#text-area");
 const imagen = document.querySelector(".scrn-right__img");
 //selecciona tanto la etiqueta p como el h2 con clase "info"
-const noTexto = document.querySelectorAll("p[class='info'], h2[class='info']");
+const noTexto = document.querySelectorAll("p[class='texto-right'], h2[class='texto-right']");
 const mostrarTexto = document.querySelector(".mostrar-texto");
 const copy = document.querySelector(".boton-copiar");
 
-//Se evita que el boton de copiar se despliegue al cargar la página cuando no hay texto
+//Se evita que el div mostrarTexto ocupe espacio (tipo margin)y que el boton de copiar se despliegue al cargar la página cuando no hay texto
 document.addEventListener("DOMContentLoaded", () => {
   if (texto.value === "") {
     copy.style.display = "none";
+    mostrarTexto.style.display = "none";
   }
 });
 //Al escribir la letra se transforma en solo minuscula y sin simbolos
@@ -94,7 +95,7 @@ desencriptar.addEventListener("click", () => {
     isencriptado = false;
   }
 });
-
+//Copia el texto que se escriba/encripte/desencripte
 copy.addEventListener("click", ()=>{
   navigator.clipboard.writeText(texto.value).then(
     () => alert("Texto copiado al portapapeles!"),
