@@ -8,7 +8,6 @@ body {
   background-color: #e5e5e5;
   color: #191919;
   min-height: 100vh;
-  margin: 0;
 }
 .container {
   display: grid;
@@ -105,7 +104,7 @@ Estilos del lado derecho de la pantalla
   text-align: center;
   justify-content: center;
   height: 35rem;
-  width: 20rem;
+  width: 80%;
   padding: 1rem;
   background-color: #f1f1f1;
   box-shadow: 0px 24px 32px -8px #00000014;
@@ -119,10 +118,14 @@ Estilos del lado derecho de la pantalla
 }
 .mostrar-texto {
   
-  margin: 2rem 1rem 0 1rem;
+  margin: 0 1rem;
   height: 25rem;
   width: 90%;
   overflow: visible;
+  border: none;
+  outline: none;
+  resize: none;
+  background-color: #f1f1f1;
 
 }
 
@@ -137,7 +140,7 @@ Estilos del lado derecho de la pantalla
 Media Querys: Diseño Responsivo
 /////////*/
 
-@media (max-width: 539px) {
+@media (max-width: 520px) {
   .container {
     display: grid;
     grid-template-columns: 1fr;
@@ -164,6 +167,7 @@ Media Querys: Diseño Responsivo
   .buttons {
     flex-direction: column;
     gap: 10px;
+    width: 80%;
   }
   button {
     width: 18rem;
@@ -172,24 +176,39 @@ Media Querys: Diseño Responsivo
   h2 {
     font-size: 22px;
   }
-  .info {
-    justify-content: center;
-  }
+  
   .mostrar-texto {
-    height: auto;
-  }
-  .mostrar-texto{
+    height: 5rem;
     margin-top: 1rem;
   }
+  
 }
 
-@media (min-width: 540px) and(max-width: 767px) {
+@media (min-width: 519px) and(max-width: 759px) {
   .container {
+    display: grid;
     grid-template-columns: 1fr;
   }
+  .scrn-right__img{
+    display: none;
+  }
+  .buttons {
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+  }
+  button {
+    width: 18rem;
+    margin: auto;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  
+  
 }
 
-@media screen and(min-width:768) and(max-width: 1023px) {
+@media screen and(min-width:760) and(max-width: 1023px) {
   .container {
     grid-template-columns: 1fr 1fr;
   }
@@ -197,6 +216,6 @@ Media Querys: Diseño Responsivo
 
 @media screen and(min-width:1023) and(max-width: 1200px) {
   .container {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
   }
 }
