@@ -26,20 +26,22 @@ texto.addEventListener("input", () => {
   if (texto.value === "") {
     isencriptado = false;
     ///Si no hay texto o se borra, se verá la imagen y texto que informa que no se ha introducido txt
-    imagen.style.display = "block";
+    imagen.classList.remove("oculto");
     noTexto.forEach((el) => (el.style.display = "block"));
     mostrarTexto.style.display = "none";
     mostrarTexto.innerText = "";
     copy.style.display = "none";
   } else {
-    imagen.style.display = "none";
+    imagen.classList.add("oculto");
     noTexto.forEach((el) => (el.style.display = "none"));
     mostrarTexto.style.display = "block";
     mostrarTexto.innerText = texto.value;
+    imagen.style.display = "none";
     if (texto.value !== "") {
       copy.style.display = "flex";
     }
   }
+
 });
 //Clave del encriptado
 const encripta = {

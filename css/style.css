@@ -53,9 +53,9 @@ Estilos del lado izquierdo de la pantalla
   background-color: #e5e5e5;
   outline: none;
   width: 90%;
-  margin: 3rem 0 0 2rem;
+  margin: 3rem 0 0 4rem;
   padding: 1rem;
-  height: 22rem;
+  height: 20rem;
   resize: none;
   overflow: visible;
   font-size: 20px;
@@ -134,7 +134,7 @@ Estilos del lado derecho de la pantalla
   background-color: #616161;
   color: #e5e5e5;
   border: 2px solid #191919;
-  margin: 0 auto;
+ margin-top: 2rem;
 }
 
 /*///////
@@ -159,13 +159,13 @@ Media Querys: Diseño Responsivo
     padding: 1rem;
   
   }
-  element.style {
-    display: none;
-  }
- .scrn-right__img{
-    display: none;
-  }
 
+.scrn-right__img{
+  display: none;
+}
+.oculto {
+  display: none;
+}
   .buttons {
     flex-direction: column;
     gap: 14px;
@@ -183,9 +183,6 @@ Media Querys: Diseño Responsivo
     height: 5rem;
     margin-top: 1rem;
     text-align: center;
-  }
-  .boton-copiar {
-    margin-top: 2rem;
   }
 }
 
