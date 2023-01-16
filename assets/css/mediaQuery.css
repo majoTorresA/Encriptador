@@ -1,0 +1,46 @@
+
+/*Media Querys: Diseño Responsivo*/
+
+@media (max-width: 767px) {
+    .container {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  
+    #text-area {
+      height: 10rem;
+      margin: 3rem 0 0 1rem;
+      text-align: center;
+    }
+  
+    .scrn-right {
+      height: 10rem;
+      margin: 5rem 0.5rem 1rem 0.5rem;
+      padding: 1rem;
+    }
+  
+    .scrn-right__img {
+      display: none;
+    }
+    .oculto {
+      display: none;
+    }
+    .buttons {
+      flex-direction: column;
+      gap: 14px;
+      width: 85%;
+    }
+    button {
+      width: 80%;
+      margin: auto;
+    }
+    h2 {
+      font-size: 22px;
+    }
+  
+    .mostrar-texto {
+      height: 5rem;
+      margin-top: 1rem;
+      text-align: center;
+    }
+  }

@@ -1,0 +1,46 @@
+/*//////
+Estilos del lado derecho de la pantalla
+////////*/
+
+.scrn-right {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    height: 30rem;
+    padding: 1rem;
+    background-color: #f1f1f1;
+    box-shadow: 0px 24px 32px -8px #00000014;
+    margin: 2rem;
+    border-radius: 32px;
+  }
+  
+  .scrn-right__img {
+    width: 16rem;
+    height: 18rem;
+  }
+  
+  .mostrar-texto {
+    margin: 0 1rem;
+    height: 22rem;
+    width: 90%;
+    overflow: visible;
+    border: none;
+    outline: none;
+    resize: none;
+    background-color: #f1f1f1;
+    font-size: 20px;
+  }
+  
+  .boton-copiar {
+    background-color: #616161;
+    color: #e5e5e5;
+    border: 2px solid #191919;
+    margin-top: 2rem;
+  }
+  .boton-copiar:hover{
+    background-color: #444444;
+  }
+  .oculto-grande {
+    display: none;
+  }
