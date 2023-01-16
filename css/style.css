@@ -136,7 +136,9 @@ Estilos del lado derecho de la pantalla
   border: 2px solid #191919;
  margin-top: 2rem;
 }
-
+.oculto-grande {
+  display: none;
+}
 /*///////
 Media Querys: Diseño Responsivo
 /////////*/
@@ -190,4 +192,5 @@ Media Querys: Diseño Responsivo
   .container {
     grid-template-columns: 2fr 1fr;
   }
+ 
 }

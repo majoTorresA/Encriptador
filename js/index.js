@@ -26,17 +26,18 @@ texto.addEventListener("input", () => {
   if (texto.value === "") {
     isencriptado = false;
     ///Si no hay texto o se borra, se verá la imagen y texto que informa que no se ha introducido txt
-    imagen.classList.remove("oculto");
+    imagen.classList.remove("oculto","oculto-grande");
     noTexto.forEach((el) => (el.style.display = "block"));
     mostrarTexto.style.display = "none";
     mostrarTexto.innerText = "";
     copy.style.display = "none";
   } else {
-    imagen.classList.add("oculto");
+    imagen.classList.add("oculto-grande");
+    imagen.classList.remove("oculto");
     noTexto.forEach((el) => (el.style.display = "none"));
     mostrarTexto.style.display = "block";
     mostrarTexto.innerText = texto.value;
-    imagen.style.display = "none";
+   // imagen.style.display = "none";
     if (texto.value !== "") {
       copy.style.display = "flex";
     }
