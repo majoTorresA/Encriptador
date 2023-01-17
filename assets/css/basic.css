@@ -1,8 +1,8 @@
 body {
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
-  background-color: #e5e5e5;
-  color: #191919;
+  background-color: var(--base);
+  color: var(--font-dark);
   min-height: 100vh;
 }
 .container {
@@ -11,6 +11,16 @@ body {
 }
 
 /*Estilos en las fuentes*/
+:root {
+--base: #f1f2f0;
+--darker: #1d1d32;
+--font-dark: #192130;
+--font-info: #78797e;
+--font-light: #f1f1f1;
+--hover-copy: #6c6f82;
+--button: #828aff;
+--hover-button: #554dc5;
+}
 
 h2 {
   font-size: 28px;
@@ -19,32 +29,34 @@ h2 {
 h6 {
   font-size: 12px;
   font-weight: 400;
-  color: #616161;
+  color: var(--font-info);
 }
 p {
   font-size: 16px;
   font-weight: 400;
 }
+ .mostrar-texto, #text-area {
+  color: var(--font-dark);
+}
 /*Estilos del logo y Header*/
 
 .logo {
-  background-color: #191919;
+  background-color: var(--button);
   height: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-.logo__h2 {
-  color: #f1f1f1;
+.logo__h2, .footer__h3 {
+  color: var(--font-light);
 }
 
 /*Estilos del pie de página*/
 
 .footer {
   display: flex;
-  background-color: #191919;
-  color: #f1f1f1;
+  background-color: var(--darker);
   height: 6rem;
   justify-content: center;
   align-items: center;
@@ -52,6 +64,5 @@ p {
 }
 .footer__h3 {
   font-size: 18px;
-  color: #f1f1f1;
 }
 
